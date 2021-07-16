@@ -10,9 +10,13 @@ import { Container,
         ProductButton
      } from './styled'
 
-export default ({data}) => {
+export default ({data, onClick}) => {
+    const handleClick = () => {
+        onClick(data);
+    }
+
     return(
-        <Container>
+        <Container onClick={handleClick}>
             <ProductImageArea>
                 <ProductImage src={data.image} />
             </ProductImageArea>

@@ -8,11 +8,14 @@ import { Container,
         ProdPagArea,
         ProdPagItem 
     } from './styled';
+//Componentes    
 import Header from '../../components/Header';
 import api from '../../api';
 import CategoryItem from '../../components/CategoryItem';
 import ReactTooltip from 'react-tooltip';
 import ProductItem from '../../components/ProductItem';
+import Modal from '../../components/Modal';
+import ModalProduct from '../../components/ModalProduct';
 
 let searchTimer = null;
 
@@ -27,6 +30,9 @@ export default () => {
     const [activePage, setActivePage] = useState(1);
     //Busca por tempo... nao gostei dessa solucao
     const [activeSearch, setActiveSearch] = useState('');
+    //State de controle da exibicao do modal
+    const [statusModal, setStatusModal] = useState(false);
+    const [modalData, setModalData] = useState({});
 
     const getProducts = async () => {
         const prod = await api.getProducts(activeCategory, activePage, activeSearch);
@@ -60,6 +66,11 @@ export default () => {
         setProducts([]);
         getProducts();
     }, [activeCategory, activePage, activeSearch])
+
+    const handleProductClick = (data) => {
+        setModalData(data);
+        setStatusModal(true);
+    }
 
     return (
         <Container>
@@ -100,6 +111,7 @@ export default () => {
                             <ProductItem
                                 key={index}
                                 data={item}
+                                onClick={handleProductClick}
                             />
                         ))}                        
                     </ProductList>
@@ -119,6 +131,9 @@ export default () => {
                     ))}
                 </ProdPagArea>
             }
+            <Modal status={statusModal} setStatus={setStatusModal}>
+                <ModalProduct data={modalData} setStatus={setStatusModal}/>
+            </Modal>
         </Container>
     );
 }
