@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rafood/static/css/main.7608451e.chunk.css",
+    "main.js": "/rafood/static/js/main.82b6ea73.chunk.js",
+    "main.js.map": "/rafood/static/js/main.82b6ea73.chunk.js.map",
+    "runtime-main.js": "/rafood/static/js/runtime-main.733bbfec.js",
+    "runtime-main.js.map": "/rafood/static/js/runtime-main.733bbfec.js.map",
+    "static/js/2.f5065d16.chunk.js": "/rafood/static/js/2.f5065d16.chunk.js",
+    "static/js/2.f5065d16.chunk.js.map": "/rafood/static/js/2.f5065d16.chunk.js.map",
+    "index.html": "/rafood/index.html",
+    "precache-manifest.f18c4eaf96a5bc4cd28ed1c78f3a2d86.js": "/rafood/precache-manifest.f18c4eaf96a5bc4cd28ed1c78f3a2d86.js",
+    "service-worker.js": "/rafood/service-worker.js",
+    "static/css/main.7608451e.chunk.css.map": "/rafood/static/css/main.7608451e.chunk.css.map",
+    "static/js/2.f5065d16.chunk.js.LICENSE.txt": "/rafood/static/js/2.f5065d16.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.733bbfec.js",
+    "static/js/2.f5065d16.chunk.js",
+    "static/css/main.7608451e.chunk.css",
+    "static/js/main.82b6ea73.chunk.js"
+  ]
+}
